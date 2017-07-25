@@ -17,6 +17,7 @@ export function booksReducers(state = {books: [
 ]}, action) {
   switch(action.type) {
     case "GET_BOOKS":
+      console.log('getting books');
       return {...state, books: [...state.books]};
       break;
     case "POST_BOOK":

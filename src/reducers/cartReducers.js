@@ -4,6 +4,7 @@
 export function cartReducers(state = {cart:[]}, action) {
   switch(action.type) {
     case 'ADD_TO_CART':
+      //console.log('added to cart');
       return {
         cart: action.payload,
         totalAmount: totals(action.payload).amount,
