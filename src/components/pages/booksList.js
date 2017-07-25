@@ -13,11 +13,10 @@ class BooksList extends Component {
     this.props.getBooks();
   }
   render() {
-    console.log(this.props.books);
-    const booksList = this.props.books.map((booksArr) => {
+    const booksList = this.props.books.map((booksArr,ind) => {
       //console.log(booksArr[0]);
       return (
-        <Col xs={12} sm={6} md={4} key={booksArr._id}>
+        <Col xs={12} sm={6} md={4} key={ind}>
           <BookItem
             _id={booksArr._id}
             title={booksArr.title}
